@@ -1,0 +1,74 @@
+
+<graphml>
+  <graph id="Graph" edgedefault="undirected">
+    <node id="funcionarios">
+      <data>codFuncionario</data>
+      <data>conjuges_codConjuge</data>
+      <data>nome</data>
+      <data>cpf</data>
+      <data>rg</data>
+      <data>endere\231o</data>
+      <data>fone</data>
+      <data>email</data>
+      <data>dataNas</data>
+      <data>dataReg</data>
+    </node>
+    <node id="conjuges">
+      <data>codConjuge</data>
+      <data>nome</data>
+      <data>dataNasc</data>
+    </node>
+    <node id="fornecedores">
+      <data>codFornacedor</data>
+      <data>nome</data>
+      <data>cnpj</data>
+      <data>endere\231o</data>
+      <data>fone</data>
+      <data>email</data>
+      <data>site</data>
+      <data>cep</data>
+      <data>dataReg</data>
+    </node>
+    <node id="produtos">
+      <data>codProduto</data>
+      <data>fornecedores_codFornacedor</data>
+      <data>nome</data>
+      <data>quantidade</data>
+      <data>quantidadeMinima</data>
+      <data>custoMedio</data>
+      <data>precoVenda</data>
+      <data>dataReg</data>
+    </node>
+    <node id="clientes">
+      <data>codCliente</data>
+      <data>nome</data>
+      <data>sexo</data>
+      <data>cpf</data>
+      <data>endereco</data>
+      <data>email</data>
+      <data>fone</data>
+      <data>dataReg</data>
+      <data>dataNasc</data>
+      <data>cep</data>
+    </node>
+    <node id="reservas">
+      <data>produtos_codProduto</data>
+      <data>clientes_codCliente</data>
+      <data>codReserva</data>
+      <data>quantidade</data>
+      <data>dataEspera</data>
+    </node>
+    <node id="usuarios">
+      <data>codUsuario</data>
+      <data>usuario</data>
+      <data>senha</data>
+      <data>nome</data>
+      <data>dataNasc</data>
+      <data>perfil</data>
+    </node>
+    <edge id="R1" source="conjuges" target="funcionarios"/>
+    <edge id="R2" source="fornecedores" target="produtos"/>
+    <edge id="R3" source="produtos" target="reservas"/>
+    <edge id="R4" source="clientes" target="reservas"/>
+  </graph>
+</graphml>
