@@ -20,7 +20,7 @@ public class Main {
     public static void main(String[] args) throws IOException {
 
         Banco banco = new Banco();
-        banco = lerModeloRelacional("modelagemRelacional.xml"); //passar o arquivo gerado na ferramenta DBDesigner.
+        banco = lerModeloRelacional("mER.xml"); //passar o arquivo gerado na ferramenta DBDesigner.
 
         Graphml graphml = new Graphml();
         Grafo grafo = new Grafo();
